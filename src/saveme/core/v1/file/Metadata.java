@@ -24,10 +24,8 @@ public class Metadata {
 	 *            The full path of the file contents. Doesn't contain the last
 	 *            component of the path. This starts with the slash. Must not be
 	 *            <em>null</em>.
-	 * @param createdDate
 	 * @throws IllegalArgumentException
 	 *             If any argument does not meet its preconditions.
-	 *             preconditions.
 	 */
 	public Metadata(String name, String path) {
 		if (this.name == null)
