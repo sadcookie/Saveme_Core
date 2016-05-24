@@ -1,7 +1,5 @@
 package saveme.core.v1.file;
 
-import saveme.core.v1.util.LangUtil;
-
 public class Metadata {
 
 	protected final String name;

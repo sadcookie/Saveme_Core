@@ -9,7 +9,7 @@ public class FileMetadata extends Metadata {
 
 	protected final String Id;
 	protected final Date createdDate;
-	protected final Date clientModified;
+	protected final Date clientModified; // this may not be finialised. This 
 	protected final Date serverModified;
 	protected final String revision;
 	protected final long size;
@@ -24,13 +24,13 @@ public class FileMetadata extends Metadata {
 	 *            component of the path. This starts with the slash. Must not be
 	 *            <em>null</em>.
 	 * @param Id  Owner information.
-	 * @param createdDate 
-	 * @param clientModified
-	 * @param serverModified
-	 * @param revision
-	 * @param size
+	 * @param createdDate The date of file created on server. 
+=	 * @param clientModified  The last date of user recently modified. If content of the file updated, the date will be updated. Otherwise, it is identical to serverModifed date. 
+	 * @param serverModified  Latest modification date updated by user. This  
+	 * @param revision  The latest revision. Revision may update if the client upload the file to Saveme Server.
+	 * @param size  File size in Bytes
 	 * @param propertyGroup
-	 * @throws IllegalArgumentException
+	 * @throws IllegalArgumentException  if the arguments are null, 
 	 */
 	public FileMetadata(String name, String path, String Id,Date createdDate, Date clientModified, Date serverModified,
 			String revision, long size, List<PropertyGroup> propertyGroup) {
@@ -61,5 +61,11 @@ public class FileMetadata extends Metadata {
 
 	public FileMetadata(String name, String path, Date createdDate) {
 		this(name, path, null, null, null, null, null, -1, null);
+	}
+	
+	public boolean clientModified(){
+		if(this.clientModified== this.serverModified)		
+			return true;
+		return false;
 	}
 }
