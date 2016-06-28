@@ -45,7 +45,7 @@ public class DriveQuickstart {
 
 	private static String CLIENT_ID = "66190915557-pq6jqpls1so56em1tkcdsr0dv6vb9crj.apps.googleusercontent.com";
 	private static String CLIENT_SECRET = "N-h_qYjmKv2PXglmaVPLL0ch";
-
+//asdfasdf
 	private static String REDIRECT_URI = "urn:ietf:wg:oauth:2.0:oob";
 	/** Application name. */
 	private static final String APPLICATION_NAME = "Drive API Java Quickstart";
@@ -155,7 +155,7 @@ public class DriveQuickstart {
 
 	private static byte[] bytes = new byte[1024];
 
-	// ÆÄÀÏÀ» Áý¾î ³Ö´Â ¸Þ¼Òµå
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½Þ¼Òµï¿½
 	private static void writeInputStreamToFile(String filename, InputStream in) throws IOException {
 		OutputStream out = null;
 		try {
@@ -214,7 +214,7 @@ public class DriveQuickstart {
 				filepart.write(ChunkSize);
 				filepart.flush();
 				filepart.close();
-				// °æ·Î Àâ¾Æ¼­ ÆÄÀÏ Ãß°¡ ½ÃÅ°±â
+				// ï¿½ï¿½ï¿½ ï¿½ï¿½Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½ï¿½Å°ï¿½ï¿½
 				uploadFile(file, service.get(nchunk - 1));
 				System.out.println("Application Name == " + service.get(nchunk - 1).getApplicationName());
 				ChunkSize = null;
@@ -388,7 +388,7 @@ public class DriveQuickstart {
 		//ServiceList.add(service_1);
 		//ServiceList.add(service_3);
 
-		String filePath = "C:\\Users\\sung\\Desktop\\GDA\\½Ä¹° ¼öºÐ ÃøÁ¤ ÀåÄ¡_Á¤¿µÁÖ.pptx";
+		String filePath = "C:\\Users\\sung\\Desktop\\GDA\\ï¿½Ä¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.pptx";
 
 		// Build a new authorized API client service.
 		// Print the names and IDs for up to 10 files.
@@ -407,7 +407,7 @@ public class DriveQuickstart {
 		// file
 		// =service_1.files().get("0B0BEfjXa6SxPZW0p5Z1NDclFHWVE").execute();
 
-		// ÆÄÀÏ ÀúÀå ÇÏ´Â°Í
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Â°ï¿½
 		// InputStream input = downloadFile(service_1, file);
 
 		// writeInputStreamToFile(file.getTitle(),input);
@@ -416,7 +416,7 @@ public class DriveQuickstart {
 		//File body = new File();
 		//body.setTitle(fileContent.getName());
 		//divideFile(fileContent,ServiceList);
-		//DownNMergeFile(ServiceList,"½Ä¹° ¼öºÐ ÃøÁ¤ ÀåÄ¡_Á¤¿µÁÖ");
+		//DownNMergeFile(ServiceList,"ï¿½Ä¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		Dropbox(Dropbox_ACCESS_TOKEN);
 		MergeDriveUI merge = new MergeDriveUI();
 		merge.getGoogleDriveFile(files);
